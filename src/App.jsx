@@ -3,15 +3,12 @@ import { useState, useEffect } from "react";
 import logo from "./images/logo.png";
 import { CgMenuGridR } from "react-icons/cg";
 import { AiFillCloseCircle } from "react-icons/ai";
-import { Carousel as Caro } from 'react-responsive-carousel';
-import { MdOutlineLocationOn } from 'react-icons/md';
-import { slides } from './constants/index';
-import 'react-responsive-carousel/lib/styles/carousel.min.css';
-import Countdown from './components/Countdown';
-import { Link } from "react-router-dom";
-import { animateScroll as scroll } from "react-scroll";
-
-
+import { Carousel as Caro } from "react-responsive-carousel";
+import { MdOutlineLocationOn } from "react-icons/md";
+import { slides } from "./constants/index";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+import Countdown from "./components/Countdown";
+import { Link } from "react-scroll";
 
 const App = () => {
   const [isMobile, setIsMobile] = useState(false);
@@ -59,12 +56,7 @@ const App = () => {
                   />{" "}
                 </a>
               </div>
-              {/* <div
-                className="cursor-pointer text-yellow absolute top-4 right-7"
-                onClick={() => setIsDropdownOpen(true)}
-              >
-                open
-              </div> */}
+             
             </div>
           ) : (
             // Desktop view with navigation links
@@ -84,41 +76,65 @@ const App = () => {
               </div>
 
               <div className="flex flex-row justify-between text-md items-center">
-                <Link to="/About" smooth={true} duration={500} onClick={() => scroll.scrollToBottom()}>
-                  <div className="px-3 ">
-                    <button className=" hover:text-yellow">About</button>
-                  </div>
+                <Link
+                  to="about"
+                  smooth={true}
+                  duration={500}
+                  className="px-3"
+                  onClick={() => setIsDropdownOpen(false)}
+                >
+                  <button className="hover:text-yellow">About</button>
                 </Link>
 
-                <a href="/Schedule">
+                <Link  to="schedule"
+                  smooth={true}
+                  duration={500}
+                  className="px-3"
+                  onClick={() => setIsDropdownOpen(false)}>
                   <div className="px-3 md:px-3">
                     <button className=" hover:text-yellow ">Schedule</button>
                   </div>
-                </a>
+                </Link>
 
-                <a href="/Speakers">
+                <Link to="speakers"
+                  smooth={true}
+                  duration={500}
+                  className="px-3"
+                  onClick={() => setIsDropdownOpen(false)}>
                   <div className="px-3 md:px-3">
                     <button className=" hover:text-yellow">Speakers</button>
                   </div>
-                </a>
+                </Link>
 
-                <a href="/GetInvolved">
-                  <div className="px-3 md:px-3">
+                <Link  to="involved"
+                  smooth={true}
+                  duration={500}
+                  className="px-3"
+                  onClick={() => setIsDropdownOpen(false)}>
+                  <div className="px-1 md:px-1">
                     <button className=" hover:text-yellow">Get Involved</button>
                   </div>
-                </a>
+                </Link>
 
-                <a href="/Gallery">
-                  <div className="px-3 md:px-3  ">
+                <Link to="gallery"
+                  smooth={true}
+                  duration={500}
+                  className="px-3"
+                  onClick={() => setIsDropdownOpen(false)}>
+                  <div className="px-1 md:px-1  ">
                     <button className=" hover:text-yellow">Gallery</button>
                   </div>
-                </a>
+                </Link>
 
-                <a href="/Contact">
-                  <div className="px-3 md:px-3  ">
+                <Link to="contact"
+                  smooth={true}
+                  duration={500}
+                  className="px-1"
+                  onClick={() => setIsDropdownOpen(false)}>
+                  <div className="px-1 ">
                     <button className=" hover:text-yellow">Contact</button>
                   </div>
-                </a>
+                </Link>
               </div>
 
               <div className="flex items-center flex-row ">
@@ -133,8 +149,7 @@ const App = () => {
 
           {isMobile && isDropdownOpen && (
             <div className="text-black  py-4">
-
-              < AiFillCloseCircle
+              <AiFillCloseCircle
                 className="w-10 h-10 text-yellow cursor-pointer hover:w-9 hover:h-9 absolute xx:top-5 sm:top-8 right-7 "
                 onClick={() => setIsDropdownOpen(false)}
               />
@@ -183,90 +198,97 @@ const App = () => {
       </nav>
 
       <div className="relative xx:h-[500px] sm:h-[500px] flex flex-col items-center justify-center z-10">
-      <Caro
-        autoPlay={true}
-        infiniteLoop={true}
-        interval={3000}
-        emulateTouch={true}
-        swipeable={false}
-        showThumbs={false}
-        showStatus={false}
-        showIndicators={true}
-        showArrows={false}
-      >
-        {slides.map((s, index) => (
-          <div key={index} className='carousel-slide'>
-            <div className='relative w-full sm:h-[500px] h-[500px]'>
-              <img
-                className='w-full h-full filter brightness-50 object-cover object-center'
-                src={s.img}
-                alt='Slide Image'
-              />
+        <Caro
+          autoPlay={true}
+          infiniteLoop={true}
+          interval={3000}
+          emulateTouch={true}
+          swipeable={false}
+          showThumbs={false}
+          showStatus={false}
+          showIndicators={true}
+          showArrows={false}
+        >
+          {slides.map((s, index) => (
+            <div key={index} className="carousel-slide">
+              <div className="relative w-full sm:h-[500px] h-[500px]">
+                <img
+                  className="w-full h-full filter brightness-50 object-cover object-center"
+                  src={s.img}
+                  alt="Slide Image"
+                />
 
-              <div className='absolute inset-2 left-2 flex justify-center bg-gradient-to-b from-transparent to-[#2f1f6d4e] bg-opacity-20'></div>
-              <div className='absolute inset-0  flex flex-col justify-center bg-gradient-to-b from-transparent to-[#050212f0] bg-opacity-40 transition-all duration-300 hover:bg-opacity-40 sm:py-32 mt-[-3rem] sm:px-6 px-2 '>
-                <h1
-              
-                  className='font-bold outline-white xx:text-2xl sm:text-4xl text-transparent z-10 py-2'
-                >
-                  Oyo State
-                </h1>
-
-                <h1
-                  className='font-semibold outline-red text-transparent xx:text-3xl sm:text-4xl md:text-5xl py-4'
-                 
-                >
-                  Digital Economy Summit Ibadan
-                </h1>
-
-                <h1
-                  className='font-bold text-xl py-2 text-white'
-                >
-                  19th June, 2024
-                </h1>
-
-                <div
-                  className='flex sm:flex-row xx:flex-col items-center justify-center py-4 sm:py-5 sm:pt-10 '
-                >
-                  <MdOutlineLocationOn className='w-6 h-6 text-yellow font-bold' />
-
-                  <h1 className='px-2 flex text-md sm:text-xl outline-yellow '>
-                    Trenchard Hall, University of Ibadan, Ibadan
+                <div className="absolute inset-2 left-2 flex justify-center bg-gradient-to-b from-transparent to-[#2f1f6d4e] bg-opacity-20"></div>
+                <div className="absolute inset-0  flex flex-col justify-center bg-gradient-to-b from-transparent to-[#050212f0] bg-opacity-40 transition-all duration-300 hover:bg-opacity-40 sm:py-32 mt-[-3rem] sm:px-6 px-2 ">
+                  <h1 className="font-bold outline-white xx:text-2xl sm:text-4xl text-transparent z-10 py-2">
+                    Oyo State
                   </h1>
-                </div>
 
-                <div>
-                  <Countdown />
+                  <h1 className="font-semibold outline-red text-transparent xx:text-3xl sm:text-4xl md:text-5xl py-4">
+                    Digital Economy Summit Ibadan
+                  </h1>
+
+                  <h1 className="font-bold text-xl py-2 text-white">
+                    19th June, 2024
+                  </h1>
+
+                  <div className="flex sm:flex-row xx:flex-col items-center justify-center py-4 sm:py-5 sm:pt-10 ">
+                    <MdOutlineLocationOn className="w-6 h-6 text-yellow font-bold" />
+
+                    <h1 className="px-2 flex text-md sm:text-xl outline-yellow ">
+                      Trenchard Hall, University of Ibadan, Ibadan
+                    </h1>
+                  </div>
+
+                  <div>
+                    <Countdown />
+                  </div>
                 </div>
               </div>
-
             </div>
-          </div>
-        ))}
-      </Caro>
+          ))}
+        </Caro>
       </div>
 
-      <div className="text-red bg-white text-2xl p-20 border-b-2  text-center">
+      <div
+        id="about"
+        className="text-red bg-white text-2xl p-20 border-b-2  text-center"
+      >
         About
       </div>
 
-      <div className="text-red bg-white text-2xl p-20 border-b-2  text-center">
+      <div
+        id="schedule"
+        className="text-red bg-white text-2xl p-20 border-b-2  text-center"
+      >
         Schedule
       </div>
 
-      <div className="text-red text-2xl bg-white p-20 border-b-2 text-center">
+      <div
+        id="speakers"
+        className="text-red text-2xl bg-white p-20 border-b-2 text-center"
+      >
         speakers
       </div>
 
-      <div className="text-red text-2xl bg-white p-20 border-b-2 text-center">
+      <div
+        id="involved"
+        className="text-red text-2xl bg-white p-20 border-b-2 text-center"
+      >
         get involved
       </div>
 
-      <div className="text-red text-2xl bg-white p-20 border-b-2 text-center">
+      <div
+        id="gallery"
+        className="text-red text-2xl bg-white p-20 border-b-2 text-center"
+      >
         gallery
       </div>
 
-      <div className="text-red text-2xl bg-white p-20 border-b-2 text-center">
+      <div
+        id="contact"
+        className="text-red text-2xl bg-white p-20 border-b-2 text-center"
+      >
         contact
       </div>
 
