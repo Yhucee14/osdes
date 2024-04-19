@@ -7,6 +7,10 @@ import { Carousel as Caro } from 'react-responsive-carousel';
 import { MdOutlineLocationOn } from 'react-icons/md';
 import { slides } from './constants/index';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
+import Countdown from './components/Countdown';
+import { Link } from "react-router-dom";
+import { animateScroll as scroll } from "react-scroll";
+
 
 
 const App = () => {
@@ -65,7 +69,7 @@ const App = () => {
           ) : (
             // Desktop view with navigation links
             <div className="flex  justify-between">
-              <div className="flex justify-start w-[200px] ">
+              <div className="flex  justify-start w-[200px] ">
                 <a
                   href="./"
                   target={"_blank"}
@@ -80,11 +84,11 @@ const App = () => {
               </div>
 
               <div className="flex flex-row justify-between text-md items-center">
-                <a href="/About">
+                <Link to="/About" smooth={true} duration={500} onClick={() => scroll.scrollToBottom()}>
                   <div className="px-3 ">
                     <button className=" hover:text-yellow">About</button>
                   </div>
-                </a>
+                </Link>
 
                 <a href="/Schedule">
                   <div className="px-3 md:px-3">
@@ -128,13 +132,7 @@ const App = () => {
           )}
 
           {isMobile && isDropdownOpen && (
-            <div className="text-black py-4">
-              {/* <div
-                className="cursor-pointer absolute text-yellow top-4 right-10"
-                onClick={() => setIsDropdownOpen(false)}
-              >
-                close
-              </div> */}
+            <div className="text-black  py-4">
 
               < AiFillCloseCircle
                 className="w-10 h-10 text-yellow cursor-pointer hover:w-9 hover:h-9 absolute xx:top-5 sm:top-8 right-7 "
@@ -209,13 +207,13 @@ const App = () => {
               <div className='absolute inset-0  flex flex-col justify-center bg-gradient-to-b from-transparent to-[#050212f0] bg-opacity-40 transition-all duration-300 hover:bg-opacity-40 sm:py-32 mt-[-3rem] sm:px-6 px-2 '>
                 <h1
               
-                  className='font-bold outline-yellow text-3xl sm:text-4xl text-transparent z-10 py-2'
+                  className='font-bold outline-white xx:text-2xl sm:text-4xl text-transparent z-10 py-2'
                 >
                   Oyo State
                 </h1>
 
                 <h1
-                  className='font-semibold outline-red text-transparent xx:text-3xl md:text-5xl py-4'
+                  className='font-semibold outline-red text-transparent xx:text-3xl sm:text-4xl md:text-5xl py-4'
                  
                 >
                   Digital Economy Summit Ibadan
@@ -230,17 +228,26 @@ const App = () => {
                 <div
                   className='flex sm:flex-row xx:flex-col items-center justify-center py-4 sm:py-5 sm:pt-10 '
                 >
-                  <MdOutlineLocationOn className='w-6 h-6 outline-red font-bold' />
+                  <MdOutlineLocationOn className='w-6 h-6 text-yellow font-bold' />
 
-                  <h1 className='px-2 flex text-md sm:text-xl text-white font-bold'>
+                  <h1 className='px-2 flex text-md sm:text-xl outline-yellow '>
                     Trenchard Hall, University of Ibadan, Ibadan
                   </h1>
                 </div>
+
+                <div>
+                  <Countdown />
+                </div>
               </div>
+
             </div>
           </div>
         ))}
       </Caro>
+      </div>
+
+      <div className="text-red bg-white text-2xl p-20 border-b-2  text-center">
+        About
       </div>
 
       <div className="text-red bg-white text-2xl p-20 border-b-2  text-center">

@@ -24,15 +24,22 @@
   }
 
   .outline-yellow {
-    -webkit-text-stroke-width: 2px; /* For Safari/Chrome */
+    -webkit-text-stroke-width: 1px; /* For Safari/Chrome */
     -webkit-text-stroke-color: yellow; /* For Safari/Chrome */
-    text-stroke-width: 2px; /* For other browsers */
+    text-stroke-width: 1px; /* For other browsers */
     text-stroke-color: white; /* For other browsers */
   }
   
   .outline-light {
     -webkit-text-stroke-width: 2px; /* For Safari/Chrome */
     -webkit-text-stroke-color: red; /* For Safari/Chrome */
+    text-stroke-width: 2px; /* For other browsers */
+    text-stroke-color: white; /* For other browsers */
+  }
+
+  .outline-white {
+    -webkit-text-stroke-width: 2px; /* For Safari/Chrome */
+    -webkit-text-stroke-color: white; /* For Safari/Chrome */
     text-stroke-width: 2px; /* For other browsers */
     text-stroke-color: white; /* For other browsers */
   }
