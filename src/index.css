@@ -16,4 +16,23 @@
     font-style: normal;
   }
 
+  .outline-red {
+    -webkit-text-stroke-width: 4px; /* For Safari/Chrome */
+    -webkit-text-stroke-color: red; /* For Safari/Chrome */
+    text-stroke-width: 5px; /* For other browsers */
+    text-stroke-color: white; /* For other browsers */
+  }
+
+  .outline-yellow {
+    -webkit-text-stroke-width: 2px; /* For Safari/Chrome */
+    -webkit-text-stroke-color: yellow; /* For Safari/Chrome */
+    text-stroke-width: 2px; /* For other browsers */
+    text-stroke-color: white; /* For other browsers */
+  }
   
+  .outline-light {
+    -webkit-text-stroke-width: 2px; /* For Safari/Chrome */
+    -webkit-text-stroke-color: red; /* For Safari/Chrome */
+    text-stroke-width: 2px; /* For other browsers */
+    text-stroke-color: white; /* For other browsers */
+  }
