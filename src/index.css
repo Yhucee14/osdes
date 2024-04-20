@@ -17,7 +17,7 @@
   }
 
   .outline-red {
-    -webkit-text-stroke-width: 4px; /* For Safari/Chrome */
+    -webkit-text-stroke-width: 3px; /* For Safari/Chrome */
     -webkit-text-stroke-color: red; /* For Safari/Chrome */
     text-stroke-width: 5px; /* For other browsers */
     text-stroke-color: white; /* For other browsers */

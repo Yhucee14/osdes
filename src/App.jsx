@@ -56,7 +56,6 @@ const App = () => {
                   />{" "}
                 </a>
               </div>
-             
             </div>
           ) : (
             // Desktop view with navigation links
@@ -86,51 +85,61 @@ const App = () => {
                   <button className="hover:text-yellow">About</button>
                 </Link>
 
-                <Link  to="schedule"
+                <Link
+                  to="schedule"
                   smooth={true}
                   duration={500}
                   className="px-3"
-                  onClick={() => setIsDropdownOpen(false)}>
+                  onClick={() => setIsDropdownOpen(false)}
+                >
                   <div className="px-3 md:px-3">
                     <button className=" hover:text-yellow ">Schedule</button>
                   </div>
                 </Link>
 
-                <Link to="speakers"
+                <Link
+                  to="speakers"
                   smooth={true}
                   duration={500}
                   className="px-3"
-                  onClick={() => setIsDropdownOpen(false)}>
+                  onClick={() => setIsDropdownOpen(false)}
+                >
                   <div className="px-3 md:px-3">
                     <button className=" hover:text-yellow">Speakers</button>
                   </div>
                 </Link>
 
-                <Link  to="involved"
+                <Link
+                  to="involved"
                   smooth={true}
                   duration={500}
                   className="px-3"
-                  onClick={() => setIsDropdownOpen(false)}>
+                  onClick={() => setIsDropdownOpen(false)}
+                >
                   <div className="px-1 md:px-1">
                     <button className=" hover:text-yellow">Get Involved</button>
                   </div>
                 </Link>
 
-                <Link to="gallery"
+                <Link
+                  to="gallery"
                   smooth={true}
                   duration={500}
                   className="px-3"
-                  onClick={() => setIsDropdownOpen(false)}>
+                  onClick={() => setIsDropdownOpen(false)}
+                >
                   <div className="px-1 md:px-1  ">
                     <button className=" hover:text-yellow">Gallery</button>
                   </div>
                 </Link>
 
-                <Link to="contact"
+                <Link
+                  to="contact"
                   smooth={true}
                   duration={500}
                   className="px-1"
-                  onClick={() => setIsDropdownOpen(false)}>
+                  onClick={() => setIsDropdownOpen(false)}
+                >
                   <div className="px-1 ">
                     <button className=" hover:text-yellow">Contact</button>
                   </div>
@@ -138,7 +147,7 @@ const App = () => {
               </div>
 
               <div className="flex items-center flex-row ">
-                <button className="flex justify-between flex-row font-semibold py-2 px-2 rounded-md shadow-sm bg-yellow text-black border-2 border-red hover:bg-white hover:text-red">
+                <button className="flex justify-between flex-row transition duration-500 font-semibold py-2 px-2 rounded-md shadow-sm bg-yellow text-black border-2 border-red hover:bg-white hover:text-red">
                   <a href="" target={"_blank"} className="px-1">
                     Get Ticket
                   </a>
@@ -224,7 +233,7 @@ const App = () => {
                     Oyo State
                   </h1>
 
-                  <h1 className="font-semibold outline-red text-transparent xx:text-3xl sm:text-4xl md:text-5xl py-4">
+                  <h1 className="font-semibold outline-white text-transparent xx:text-3xl sm:text-4xl md:text-5xl py-4">
                     Digital Economy Summit Ibadan
                   </h1>
 
@@ -252,9 +261,30 @@ const App = () => {
 
       <div
         id="about"
-        className="text-red bg-white text-2xl p-20 border-b-2  text-center"
+        className="text-white py-5 px-2 bg-black border-b-2 flex xx:flex-col md:flex-row"
       >
-        About
+        <div className="md:w-[50%] flex flex-col">
+          <h1 className="py-2 text-xl text-yellow font-bold flex text-center justify-center">
+            About OSDES
+          </h1>
+          <p className="px-5 text-lg flex justify-center text-justify  ">
+            The Oyo State Digital Economy Summit Ibadan is a launchpad designed
+            to ignite innovation and empower students and tech enthusiasts in
+            Oyo State to actively participate in the digital economy. This
+            summit will be a vibrant space for students, aspiring tech founders,
+            and established professionals to connect, learn, and propel
+            themselves forward in the exciting digital world.
+          </p>
+
+          <div className="flex px-5 py-4 items-center flex-row">
+            <button className="flex justify-between flex-row text-md py-2 px-1 font-semibold rounded-md shadow-sm bg-yellow text-black transition duration-500 hover:bg-white hover:text-red">
+              <a href="./pages/moreAbout" target={"_blank"} className="px-1">
+                Learn more...
+              </a>
+            </button>
+          </div>
+        </div>
+        <div className=" md:w-[50%] p-32 rounded-md flex justify-center text-xl  text-center bg-gray-400">Video</div>
       </div>
 
       <div
