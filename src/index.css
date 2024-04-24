@@ -38,8 +38,8 @@
   }
 
   .outline-white {
-    -webkit-text-stroke-width: 2px; /* For Safari/Chrome */
+    -webkit-text-stroke-width: 3px; /* For Safari/Chrome */
     -webkit-text-stroke-color: white; /* For Safari/Chrome */
-    text-stroke-width: 2px; /* For other browsers */
+    text-stroke-width: 3px; /* For other browsers */
     text-stroke-color: white; /* For other browsers */
   }

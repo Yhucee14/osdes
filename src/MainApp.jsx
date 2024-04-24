@@ -165,7 +165,7 @@ const MainApp = () => {
 
               {/* Add your mobile navigation links here */}
               <div className="flex flex-col justify-between items-center bg-black text-white rounded-md   py-6">
-              <Link
+                <Link
                   to="about"
                   smooth={true}
                   duration={500}
@@ -237,7 +237,7 @@ const MainApp = () => {
 
                 <div className="absolute inset-2 left-2 flex justify-center bg-gradient-to-b from-transparent to-[#2f1f6d4e] bg-opacity-20"></div>
                 <div className="absolute inset-0  flex flex-col justify-center bg-gradient-to-b from-transparent to-[#050212f0] bg-opacity-40 transition-all duration-300 hover:bg-opacity-40 sm:py-32 mt-[-3rem] sm:px-6 px-2 ">
-                  <h1 className="font-bold outline-white xx:text-2xl sm:text-4xl text-transparent z-10 py-2">
+                  <h1 className="font-bold outline-white xx:text-2xl sm:text-4xl md:text-5xl text-transparent z-10 py-2">
                     Oyo State
                   </h1>
 
@@ -245,14 +245,17 @@ const MainApp = () => {
                     Digital Economy Summit Ibadan
                   </h1>
 
-                  <h1 className="font-bold text-xl py-2 text-white">
-                    19th June, 2024
+                  <h1 className="font-bold xx:text-xl sm:text-2xl py-2 text-white">
+                    15th June, 2024
                   </h1>
 
                   <div className="flex sm:flex-row xx:flex-col items-center justify-center py-4 sm:py-5 sm:pt-10 ">
                     <MdOutlineLocationOn className="w-6 h-6 text-yellow font-bold" />
 
-                    <h1 className="px-2 flex text-md sm:text-xl outline-yellow ">
+                    <h1
+                      className="px-2 flex xx:text-md sm:text-xl sm:text-2
+                    xl outline-yellow "
+                    >
                       Trenchard Hall, University of Ibadan, Ibadan
                     </h1>
                   </div>
@@ -269,7 +272,7 @@ const MainApp = () => {
 
       <div
         id="about"
-        className="text-white py-5 px-2 bg-black  flex xx:flex-col md:flex-row"
+        className=" text-white py-5 px-2 bg-black flex xx:flex-col md:flex-row"
       >
         <div className="md:w-[50%] flex flex-col">
           <h1 className="py-2 px-4 text-xl text-yellow font-bold flex text-center ">
@@ -283,84 +286,86 @@ const MainApp = () => {
             and established professionals to connect, learn, and propel
             themselves forward in the exciting digital world.
           </p>
-
-          {/* <div className="flex px-5 py-4 items-center flex-row">
-            <button className="flex justify-between flex-row text-md py-2 px-1 font-semibold rounded-md shadow-sm bg-yellow text-black transition duration-500 hover:bg-white hover:text-red">
-              <a href="" target={"_blank"} className="px-1">
-                Learn more...
-              </a>
-            </button>
-          </div> */}
-
-          <div className="flex px-2 py-4 items-center flex-row">
-            <Link
-              to="learnMore"
-              smooth={true}
-              duration={500}
-              className="px-3"
-              onClick={() => setIsDropdownOpen(false)}
-            >
-              <button className="flex justify-between flex-row text-md py-2 px-1 font-semibold rounded-md shadow-sm bg-yellow text-black transition duration-500 hover:bg-white hover:text-red">
-                Learn more...
-              </button>
-            </Link>
-          </div>
         </div>
         <div className=" md:w-[50%]  rounded-md flex justify-center text-xl text-center bg-gray-400">
           Video
         </div>
       </div>
 
-      <div
-        id="learnMore"
-        className="flex bg-black border-b-2 py-2 text-white flex-col"
-      >
-        <h1 className="py-4 px-6 text-xl text-yellow font-bold flex text-center ">
-          Connecting the Oyo Tech Ecosystem
-        </h1>
-        <p className="px-6 text-lg flex flex-col justify-center text-justify">
-          The summit will bring together key players from government,
-          businesses, academia, and tech experts and founders. This diverse
-          group will explore opportunities and challenges in the digital
-          landscape, fostering collaboration and knowledge-sharing to build a
-          robust tech ecosystem within Oyo State.
-          <h1 className="font-bold text-yellow text-xl py-2">Focus Areas</h1>
-          <ul>
-            <li className="py-1">
-              <b className="text-yellow "> Tech Skills Development : </b>
-              Equipping students and tech enthusiasts with the in-demand skills
-              needed to thrive in the digital job market.
-            </li>
-            <li className="py-1">
-              <b className="text-yellow ">
-                {" "}
-                Entrepreneurship and Innovation :{" "}
-              </b>
-              Providing a platform for aspiring founders to connect with
-              mentors, investors, and collaborators to turn their ideas into
-              reality.
-            </li>
-            <li className="py-1">
-              <b className="text-yellow "> Bridging the Digital Divide : </b>
-              Ensuring equitable access to digital technologies and resources
-              for all citizens of Oyo State, fostering an inclusive digital
-              future.
-            </li>
-            <li className="py-1">
-              <b className="text-yellow ">
-                {" "}
-                Industry Insights and Inspiration :{" "}
-              </b>
-              Hearing from successful tech leaders and founders about their
-              journeys and the ever-evolving digital landscape.
-            </li>
-          </ul>
-        </p>
+      <div className="relative bg-black text-yellow px-5">
+        <div className="flex px-2 py-4 items-center flex-row">
+          <button
+            onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+            className="flex justify-between flex-row text-md py-2 px-1 font-semibold rounded-md shadow-sm bg-yellow text-black transition duration-500 hover:bg-white hover:text-red"
+          >
+            Learn more...
+          </button>
+        </div>
+
+        {isDropdownOpen && (
+          <div
+            id="learnMore"
+            className="flex bg-black transition duration-500 absolute w-full px-4 top-full right-0 border-b-2 py-2 text-white flex-col"
+          >
+            <h1 className="py-4 px-4 sm:text-xl xx:text-lg text-yellow font-bold flex text-center ">
+              Connecting the Oyo Tech Ecosystem
+            </h1>
+            <p className="px-4 text-lg flex flex-col justify-center text-justify">
+              The summit will bring together key players from government,
+              businesses, academia, and tech experts and founders. This diverse
+              group will explore opportunities and challenges in the digital
+              landscape, fostering collaboration and knowledge-sharing to build
+              a robust tech ecosystem within Oyo State.
+              <h1 className="font-bold text-yellow text-xl py-2">
+                Focus Areas
+              </h1>
+              <ul>
+                <li className="py-1">
+                  <b className="text-yellow "> Tech Skills Development : </b>
+                  Equipping students and tech enthusiasts with the in-demand
+                  skills needed to thrive in the digital job market.
+                </li>
+                <li className="py-1">
+                  <b className="text-yellow ">
+                    {" "}
+                    Entrepreneurship and Innovation :{" "}
+                  </b>
+                  Providing a platform for aspiring founders to connect with
+                  mentors, investors, and collaborators to turn their ideas into
+                  reality.
+                </li>
+                <li className="py-1">
+                  <b className="text-yellow ">
+                    {" "}
+                    Bridging the Digital Divide :{" "}
+                  </b>
+                  Ensuring equitable access to digital technologies and
+                  resources for all citizens of Oyo State, fostering an
+                  inclusive digital future.
+                </li>
+                <li className="py-1">
+                  <b className="text-yellow ">
+                    {" "}
+                    Industry Insights and Inspiration :{" "}
+                  </b>
+                  Hearing from successful tech leaders and founders about their
+                  journeys and the ever-evolving digital landscape.
+                </li>
+              </ul>
+            </p>
+          </div>
+        )}
       </div>
+
+      {isDropdownOpen && (
+        <div id="space" className="xx:mt-[938px] md:mt-[461px] sm:mt-[490px] bg-black text-yellow">
+          
+        </div>
+      )}
 
       <div
         id="schedule"
-        className="text-yellow bg-black p-20 border-b-2  text-center"
+        className="text-yellow bg-black  p-20 border-b-2 z-20 text-center"
       >
         <h1 className="text-4xl font-bold">Schedule</h1>
         <p className="text-white ">Coming soon...</p>
@@ -368,7 +373,7 @@ const MainApp = () => {
 
       <div
         id="speakers"
-        className="text-yellow  bg-black p-20 border-b-2 text-center"
+        className="text-yellow z-20 bg-black p-20 border-b-2 text-center"
       >
         <h1 className="text-4xl font-bold">Speakers</h1>
         <p className="text-white ">Coming soon...</p>
@@ -407,9 +412,8 @@ const MainApp = () => {
         id="gallery"
         className="text-yellow text-2xl bg-black p-20 border-b-2 text-center"
       >
-          <h1 className="text-4xl font-bold">Gallery</h1>
-          <p className="text-white ">Coming soon...</p>
-        
+        <h1 className="text-4xl font-bold">Gallery</h1>
+        <p className="text-white ">Coming soon...</p>
       </div>
 
       <div
@@ -417,11 +421,11 @@ const MainApp = () => {
         className="text-yellow text-2xl bg-black p-20 border-b-2 text-center"
       >
         <h1 className="text-4xl font-bold">Contact</h1>
-          <p className="text-white ">Coming soon...</p>
+        <p className="text-white ">Coming soon...</p>
       </div>
 
       <footer className="p-10 text-2xl bg-black text-yellow text-center">
-      <h1 className="text-2xl font-bold">Footer</h1>
+        <h1 className="text-2xl font-bold">Footer</h1>
       </footer>
     </div>
   );
