@@ -9,6 +9,10 @@ import { slides } from "./constants/index";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import Countdown from "./components/Countdown";
 import { Link } from "react-scroll";
+import { FaFacebookF } from "react-icons/fa";
+import { BsTwitter } from "react-icons/bs";
+import { FaLinkedinIn } from "react-icons/fa";
+import { motion } from "framer-motion";
 
 const MainApp = () => {
   const [isMobile, setIsMobile] = useState(false);
@@ -237,11 +241,11 @@ const MainApp = () => {
 
                 <div className="absolute inset-2 left-2 flex justify-center bg-gradient-to-b from-transparent to-[#2f1f6d4e] bg-opacity-20"></div>
                 <div className="absolute inset-0  flex flex-col justify-center bg-gradient-to-b from-transparent to-[#050212f0] bg-opacity-40 transition-all duration-300 hover:bg-opacity-40 sm:py-32 mt-[-3rem] sm:px-6 px-2 ">
-                  <h1 className="font-bold outline-white xx:text-2xl sm:text-4xl md:text-5xl text-transparent z-10 py-2">
+                  <h1 className="font-bold text-white xx:text-2xl sm:text-4xl md:text-5xl text-transparent z-10 py-2">
                     Oyo State
                   </h1>
 
-                  <h1 className="font-semibold outline-white text-transparent xx:text-3xl sm:text-4xl md:text-5xl py-4">
+                  <h1 className="font-semibold text-white text-transparent xx:text-3xl sm:text-4xl md:text-5xl py-4">
                     Digital Economy Summit Ibadan
                   </h1>
 
@@ -287,8 +291,16 @@ const MainApp = () => {
             themselves forward in the exciting digital world.
           </p>
         </div>
-        <div className=" md:w-[50%]  rounded-md flex justify-center text-xl text-center bg-gray-400">
-          Video
+
+        <div className=" md:w-[50%]  rounded-md flex ">
+          <div className="w-full px-5 h-[300px]">
+            <iframe
+              src="https://www.youtube.com/embed/_YEuyAuoMxU"
+              title="Video Player"
+              allowFullscreen
+              className="w-full h-full flex py-3 justify-center"
+            ></iframe>
+          </div>
         </div>
       </div>
 
@@ -305,12 +317,12 @@ const MainApp = () => {
         {isDropdownOpen && (
           <div
             id="learnMore"
-            className="flex bg-black transition duration-500 absolute w-full px-4 top-full right-0 border-b-2 py-2 text-white flex-col"
+            className="flex bg-black transition duration-500 absolute w-full px-4 top-full right-0 py-2 text-white flex-col"
           >
-            <h1 className="py-4 px-4 sm:text-xl xx:text-lg text-yellow font-bold flex text-center ">
+            <h1 className="py-4 px-3 sm:text-xl xx:text-lg text-yellow font-bold flex text-center ">
               Connecting the Oyo Tech Ecosystem
             </h1>
-            <p className="px-4 text-lg flex flex-col justify-center text-justify">
+            <p className="px-4 text-lg flex flex-col justify-center sm:text-justify">
               The summit will bring together key players from government,
               businesses, academia, and tech experts and founders. This diverse
               group will explore opportunities and challenges in the digital
@@ -358,9 +370,10 @@ const MainApp = () => {
       </div>
 
       {isDropdownOpen && (
-        <div id="space" className="xx:mt-[938px] md:mt-[461px] sm:mt-[490px] bg-black text-yellow">
-          
-        </div>
+        <div
+          id="space"
+          className="xx:pt-[1060px] sm:pt-[492px] md:pt-[450px] lg:pt-[320px]  bg-black text-yellow"
+        ></div>
       )}
 
       <div
@@ -424,8 +437,71 @@ const MainApp = () => {
         <p className="text-white ">Coming soon...</p>
       </div>
 
-      <footer className="p-10 text-2xl bg-black text-yellow text-center">
-        <h1 className="text-2xl font-bold">Footer</h1>
+      <footer className="py-3 flex flex-col text-2xl bg-black text-yellow text-center">
+
+        <div className="flex flex-col justify-center">
+        <h1 className="font-bold xx:text-2xl sm:text-3xl py-4  flex justify-center">
+          OSDES 24
+        </h1>
+
+        <motion.div
+          className="flex flex-row justify-center text-[#1e1e1e] items-center px-5 py-5"
+        >
+          <motion.a
+            href="https://web.facebook.com/profile.php?viewas=100000686899395&id=61558714325284"
+            target={"_blank"}
+            whileHover={{ y: -6 }}
+            whileTap={{ scale: 0.9 }}
+            className="px-2 py-2 rounded-md bg-white text-[#264c72] shadow-lg"
+          >
+            <motion.a whileHover={{ y: -6 }} whileTap={{ scale: 0.9 }}>
+              <FaFacebookF className="w-5 h-5 mt-0.5" />
+            </motion.a>
+          </motion.a>
+
+          <motion.a
+            href="https://twitter.com/atcafricahq"
+            target={"_blank"}
+            whileHover={{ y: -6 }}
+            whileTap={{ scale: 0.9 }}
+            className="shadow-lg rounded-md bg-white text-[#264c72] px-2 py-2 ml-1"
+          >
+            <motion.a whileHover={{ y: -6 }} whileTap={{ scale: 0.9 }}>
+              <BsTwitter className="w-5 h-5 mt-0.5" />
+            </motion.a>
+          </motion.a>
+
+          <motion.a
+            href="https://www.linkedin.com/company/oyo-state-digital-economy-summit-ibadan/about/?viewAsMember=true"
+            target={"_blank"}
+            whileHover={{ y: -6 }}
+            whileTap={{ scale: 0.9 }}
+            className="shadow-lg rounded-md bg-white text-[#264c72] px-2 py-2 ml-1"
+          >
+            <motion.a whileHover={{ y: -6 }} whileTap={{ scale: 0.9 }}>
+              <FaLinkedinIn className="w-5 h-5 mt-0.5" />
+            </motion.a>
+          </motion.a>
+        </motion.div>
+        </div>
+     
+
+        {/* <div className="flex flex-row sm:justify-center py-2">
+          <h1 className="">Organized by </h1>
+
+          <a href="https://atcafrica.com" target={"_blank"}>
+            <h1 className="text-[#ffd100] px-0.5">OSDES 2024 </h1> |
+          </a>
+
+          <h1> Powered by </h1>
+          <a href="http://techappen.com" target={"_blank"}>
+            <h1 className="text-[#ffd100] px-0.5">TecHappe </h1>
+          </a>
+        </div> */}
+
+        <h1 className=" py-3 flex px-3 justify-center xx:text-center">
+          © 2024 OSDES. All Rights Reserved.{" "}
+        </h1>
       </footer>
     </div>
   );
