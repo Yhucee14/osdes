@@ -151,13 +151,23 @@ const MainApp = () => {
                 </Link>
               </div>
 
-              <div className="flex items-center flex-row ">
+<Link
+ to="ticket"
+ smooth={true}
+ duration={500}
+ className="px-1"
+ onClick={() => setIsDropdownOpen(false)}
+>
+
+
+<div className="flex items-center flex-row ">
                 <button className="flex justify-between flex-row transition duration-500 font-semibold py-2 px-2 rounded-md shadow-sm bg-yellow text-black border-2 border-red hover:bg-white hover:text-red">
                   <a href="" target={"_blank"} className="px-1">
                     Get Ticket
                   </a>
                 </button>
               </div>
+</Link>
             </div>
           )}
 
