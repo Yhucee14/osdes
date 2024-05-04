@@ -13,6 +13,7 @@ import { FaFacebookF } from "react-icons/fa";
 import { BsTwitter } from "react-icons/bs";
 import { FaLinkedinIn } from "react-icons/fa";
 import { motion } from "framer-motion";
+import { MdAddCircle } from "react-icons/md";
 
 const MainApp = () => {
   const [isMobile, setIsMobile] = useState(false);
@@ -376,6 +377,102 @@ const MainApp = () => {
         ></div>
       )}
 
+      <div id="ticket" className="bg-black text-yellow border-t-2  py-3 px-2"> 
+        <h1 className="text-2xl px-5 font-bold">Tickets</h1>
+    
+      <div className="flex xx:flex-col md:flex-row justify-between gap-4 bg-black text-yellow px-6 py-4 border-b-2 z-20">
+        <div className=" flex flex-col justify-between border-2 transition-all duration-500 hover:bg-white hover:text-black  rounded-lg shadow-md">
+          <div className="bg-[#ffd100]">
+            <h1 className="py-3 px-2 font-bold flex justify-center text-black  text-xl">
+              Regular Ticket (₦1000)
+            </h1>
+          </div>
+
+          <div>
+            {/* <h1 className=" px-2 font-semibold">
+              Includes all Standard benefits, plus:{" "}
+            </h1> */}
+            <ul className="list-none py-2 px-2 font-semibold">
+              <li className="py-1">Access to Networking </li>
+            </ul>
+          </div>
+
+          <motion.div className="px-1 flex justify-center  text-black hover:text-red  py-2 ">
+            <button className="flex justify-between flex-row hover:bg-white hover:text-red  py-2 px-2 rounded-md shadow-md bg-yellow text-black ">
+              <h1 className="px-1 font-bold">
+                <a href="https://paystack.com/pay/h23qg5hxvc" target={"_blank"}>
+                  {" "}
+                  Get Ticket
+                </a>
+              </h1>
+
+              <MdAddCircle className="w-5 h-5 mt-0.5 text-black hover:text-red" />
+            </button>
+          </motion.div>
+        </div>
+
+        <div className=" flex flex-col justify-between border-2 transition-all duration-500 hover:bg-white hover:text-black  rounded-lg shadow-md">
+          <div className="bg-[#ffd100]">
+            <h1 className="py-3 font-bold flex justify-center px-2 text-black  text-xl">
+              VIP Ticket (₦10000)
+            </h1>
+          </div>
+
+          <div>
+            {/* <h1 className=" px-2 font-semibold">
+              Includes all Standard benefits, plus:{" "}
+            </h1> */}
+            <ul className="list-none py-2 px-2 font-semibold">
+              <li className="py-1">Benefit will be listed </li>
+            </ul>
+          </div>
+
+          <motion.div className="px-1 flex justify-center  text-black hover:text-red  py-2 ">
+            <button className="flex justify-between flex-row hover:bg-white hover:text-red  py-2 px-2 rounded-md shadow-md bg-yellow text-black ">
+              <h1 className="px-1 font-bold">
+                <a href="https://paystack.com/pay/uuqnezta6p" target={"_blank"}>
+                  {" "}
+                  Get Ticket
+                </a>
+              </h1>
+
+              <MdAddCircle className="w-5 h-5 mt-0.5 text-black hover:text-red" />
+            </button>
+          </motion.div>
+        </div>
+
+        <div className=" flex flex-col justify-between border-2 transition-all duration-500 hover:bg-white hover:text-black  rounded-lg shadow-md">
+          <div className="bg-[#ffd100]">
+            <h1 className="py-3 font-bold flex px-2 justify-center text-black  text-xl">
+              Company Table (₦100k)
+            </h1>
+          </div>
+
+          <div>
+            {/* <h1 className=" px-2 font-semibold">
+              Includes all Standard benefits, plus:{" "}
+            </h1> */}
+            <ul className="list-none py-2 px-2 font-semibold">
+              <li className="py-1">Benefit will be listed </li>
+            </ul>
+          </div>
+
+          <motion.div className="px-1 flex justify-center  text-black hover:text-red  py-2 ">
+            <button className="flex justify-between flex-row hover:bg-white hover:text-red  py-2 px-2 rounded-md shadow-md bg-yellow text-black ">
+              <h1 className="px-1 font-bold">
+                <a href="https://paystack.com/pay/uuqnezta6p" target={"_blank"}>
+                  {" "}
+                  Get Ticket
+                </a>
+              </h1>
+
+              <MdAddCircle className="w-5 h-5 mt-0.5 text-black hover:text-red" />
+            </button>
+          </motion.div>
+        </div>
+      </div>
+      </div>
+
       <div
         id="schedule"
         className="text-yellow bg-black  p-20 border-b-2 z-20 text-center"
@@ -438,53 +535,49 @@ const MainApp = () => {
       </div>
 
       <footer className="py-3 flex flex-col text-2xl bg-black text-yellow text-center">
-
         <div className="flex flex-col justify-center">
-        <h1 className="font-bold xx:text-2xl sm:text-3xl py-4  flex justify-center">
-          OSDES 24
-        </h1>
+          <h1 className="font-bold xx:text-2xl sm:text-3xl py-4  flex justify-center">
+            OSDES 24
+          </h1>
 
-        <motion.div
-          className="flex flex-row justify-center text-[#1e1e1e] items-center px-5 py-5"
-        >
-          <motion.a
-            href="https://web.facebook.com/profile.php?viewas=100000686899395&id=61558714325284"
-            target={"_blank"}
-            whileHover={{ y: -6 }}
-            whileTap={{ scale: 0.9 }}
-            className="px-2 py-2 rounded-md bg-white text-[#264c72] shadow-lg"
-          >
-            <motion.a whileHover={{ y: -6 }} whileTap={{ scale: 0.9 }}>
-              <FaFacebookF className="w-5 h-5 mt-0.5" />
+          <motion.div className="flex flex-row justify-center text-[#1e1e1e] items-center px-5 py-5">
+            <motion.a
+              href="https://web.facebook.com/profile.php?viewas=100000686899395&id=61558714325284"
+              target={"_blank"}
+              whileHover={{ y: -6 }}
+              whileTap={{ scale: 0.9 }}
+              className="px-2 py-2 rounded-md bg-white text-[#264c72] shadow-lg"
+            >
+              <motion.a whileHover={{ y: -6 }} whileTap={{ scale: 0.9 }}>
+                <FaFacebookF className="w-5 h-5 mt-0.5" />
+              </motion.a>
             </motion.a>
-          </motion.a>
 
-          <motion.a
-            href="https://twitter.com/atcafricahq"
-            target={"_blank"}
-            whileHover={{ y: -6 }}
-            whileTap={{ scale: 0.9 }}
-            className="shadow-lg rounded-md bg-white text-[#264c72] px-2 py-2 ml-1"
-          >
-            <motion.a whileHover={{ y: -6 }} whileTap={{ scale: 0.9 }}>
-              <BsTwitter className="w-5 h-5 mt-0.5" />
+            <motion.a
+              href="https://twitter.com/atcafricahq"
+              target={"_blank"}
+              whileHover={{ y: -6 }}
+              whileTap={{ scale: 0.9 }}
+              className="shadow-lg rounded-md bg-white text-[#264c72] px-2 py-2 ml-1"
+            >
+              <motion.a whileHover={{ y: -6 }} whileTap={{ scale: 0.9 }}>
+                <BsTwitter className="w-5 h-5 mt-0.5" />
+              </motion.a>
             </motion.a>
-          </motion.a>
 
-          <motion.a
-            href="https://www.linkedin.com/company/oyo-state-digital-economy-summit-ibadan/about/?viewAsMember=true"
-            target={"_blank"}
-            whileHover={{ y: -6 }}
-            whileTap={{ scale: 0.9 }}
-            className="shadow-lg rounded-md bg-white text-[#264c72] px-2 py-2 ml-1"
-          >
-            <motion.a whileHover={{ y: -6 }} whileTap={{ scale: 0.9 }}>
-              <FaLinkedinIn className="w-5 h-5 mt-0.5" />
+            <motion.a
+              href="https://www.linkedin.com/company/oyo-state-digital-economy-summit-ibadan/about/?viewAsMember=true"
+              target={"_blank"}
+              whileHover={{ y: -6 }}
+              whileTap={{ scale: 0.9 }}
+              className="shadow-lg rounded-md bg-white text-[#264c72] px-2 py-2 ml-1"
+            >
+              <motion.a whileHover={{ y: -6 }} whileTap={{ scale: 0.9 }}>
+                <FaLinkedinIn className="w-5 h-5 mt-0.5" />
+              </motion.a>
             </motion.a>
-          </motion.a>
-        </motion.div>
+          </motion.div>
         </div>
-     
 
         {/* <div className="flex flex-row sm:justify-center py-2">
           <h1 className="">Organized by </h1>
