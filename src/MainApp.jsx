@@ -90,7 +90,7 @@ const MainApp = () => {
                   <button className="hover:text-yellow">About</button>
                 </Link>
 
-                <Link
+                {/* <Link
                   to="schedule"
                   smooth={true}
                   duration={500}
@@ -100,7 +100,7 @@ const MainApp = () => {
                   <div className="px-3 md:px-3">
                     <button className=" hover:text-yellow ">Schedule</button>
                   </div>
-                </Link>
+                </Link> */}
 
                 <Link
                   to="speakers"
@@ -126,7 +126,7 @@ const MainApp = () => {
                   </div>
                 </Link>
 
-                <Link
+                {/* <Link
                   to="gallery"
                   smooth={true}
                   duration={500}
@@ -136,7 +136,7 @@ const MainApp = () => {
                   <div className="px-1 md:px-1  ">
                     <button className=" hover:text-yellow">Gallery</button>
                   </div>
-                </Link>
+                </Link> */}
 
                 <Link
                   to="contact"
@@ -151,23 +151,21 @@ const MainApp = () => {
                 </Link>
               </div>
 
-<Link
- to="ticket"
- smooth={true}
- duration={500}
- className="px-1"
- onClick={() => setIsDropdownOpen(false)}
->
-
-
-<div className="flex items-center flex-row ">
-                <button className="flex justify-between flex-row transition duration-500 font-semibold py-2 px-2 rounded-md shadow-sm bg-yellow text-black border-2 border-red hover:bg-white hover:text-red">
-                  <a href="" target={"_blank"} className="px-1">
-                    Get Ticket
-                  </a>
-                </button>
-              </div>
-</Link>
+              <Link
+                to="ticket"
+                smooth={true}
+                duration={500}
+                className="px-1"
+                onClick={() => setIsDropdownOpen(false)}
+              >
+                <div className="flex items-center flex-row ">
+                  <button className="flex justify-between flex-row transition duration-500 font-semibold py-2 px-2 rounded-md shadow-sm bg-yellow text-black border-2 border-red hover:bg-white hover:text-red">
+                    <a href="" target={"_blank"} className="px-1">
+                      Get Ticket
+                    </a>
+                  </button>
+                </div>
+              </Link>
             </div>
           )}
 
@@ -190,7 +188,7 @@ const MainApp = () => {
                   <button className="hover:text-yellow">About</button>
                 </Link>
 
-                <Link
+                {/* <Link
                   to="schedule"
                   smooth={true}
                   duration={500}
@@ -198,31 +196,43 @@ const MainApp = () => {
                   onClick={() => setIsDropdownOpen(false)}
                 >
                   <button className="hover:text-yellow">Schedule</button>
+                </Link> */}
+
+                <Link
+                  to="speakers"
+                  smooth={true}
+                  duration={500}
+                  className="px-3 py-3 md:px-3"
+                  onClick={() => setIsDropdownOpen(false)}
+                >
+                  <button className="hover:text-yellow">Speakers</button>
                 </Link>
 
-                <a href="/Speakers">
-                  <div className="px-3 py-3 md:px-3">
-                    <button className=" hover:text-yellow">Speakers</button>
-                  </div>
-                </a>
+                <Link
+                  to="involved"
+                  smooth={true}
+                  duration={500}
+                  className="px-3 py-3 md:px-3"
+                  onClick={() => setIsDropdownOpen(false)}
+                >
+                  <button className="hover:text-yellow">Get Involved</button>
+                </Link>
 
-                <a href="/GetInvolved">
-                  <div className="px-3 py-3 md:px-3">
-                    <button className=" hover:text-yellow">Get Involved</button>
-                  </div>
-                </a>
-
-                <a href="/Gallery">
+                {/* <a href="/Gallery">
                   <div className="px-3 py-3 md:px-3  ">
                     <button className=" hover:text-yellow">Gallery</button>
                   </div>
-                </a>
+                </a> */}
 
-                <a href="/Contact">
-                  <div className="px-3 py-3 md:px-3  ">
-                    <button className=" hover:text-yellow">Contact</button>
-                  </div>
-                </a>
+                <Link
+                  to="contact"
+                  smooth={true}
+                  duration={500}
+                  className="px-3 py-3 md:px-3"
+                  onClick={() => setIsDropdownOpen(false)}
+                >
+                  <button className="hover:text-yellow">Contact</button>
+                </Link>
               </div>
             </div>
           )}
@@ -294,12 +304,14 @@ const MainApp = () => {
             About OSDES
           </h1>
           <p className="px-5 text-lg flex justify-center text-justify  ">
-            The Oyo State Digital Economy Summit Ibadan is a launchpad designed
-            to ignite innovation and empower students and tech enthusiasts in
-            Oyo State to actively participate in the digital economy. This
-            summit will be a vibrant space for students, aspiring tech founders,
-            and established professionals to connect, learn, and propel
-            themselves forward in the exciting digital world.
+            Empowering the next generation of entrepreneurs, creators and
+            professionals to participate in the global economy.
+            <br />
+            The Oyo State Digital Economy Summit is a launchpad designed to
+            ignite innovation and empower content creators and tech enthusiasts
+            in Oyo State to actively participate in the digital economy. This
+            summit will be a vibrant space to connect, learn, and propel Oyo
+            State forward in the exciting digital world.
           </p>
         </div>
 
@@ -387,109 +399,176 @@ const MainApp = () => {
         ></div>
       )}
 
-      <div id="ticket" className="bg-black text-yellow border-t-2  py-3 px-2"> 
+      <div id="ticket" className="bg-black text-yellow border-t-2  py-3 px-2">
         <h1 className="text-2xl px-5 font-bold">Tickets</h1>
-    
-      <div className="flex xx:flex-col md:flex-row justify-between gap-4 bg-black text-yellow px-6 py-4 border-b-2 z-20">
-        <div className=" flex flex-col justify-between border-2 transition-all duration-500 hover:bg-white hover:text-black  rounded-lg shadow-md">
-          <div className="bg-[#ffd100]">
-            <h1 className="py-3 px-2 font-bold flex justify-center text-black  text-xl">
-              Regular Ticket (₦1000)
-            </h1>
+
+        <div className="flex xx:flex-col md:flex-row justify-between gap-4 bg-black text-yellow px-6 py-4 border-b-2 z-20">
+          <div className=" flex flex-col border-2 transition-all duration-500 hover:bg-white hover:text-black  rounded-lg shadow-md">
+            <div className="bg-[#ffd100]">
+              <h1 className="py-3 px-2 font-bold flex justify-center text-black  text-xl">
+                Regular Ticket (₦1000)
+              </h1>
+            </div>
+
+            <div className="flex">
+              <ul className=" py-2 px-2 font-semibold">
+                <li className="py-1">
+                  - Access to all keynote sessions and panel discussions{" "}
+                </li>
+                <li className="py-1">
+                  {" "}
+                  - Networking opportunities with industry professionals and
+                  entrepreneurs.{" "}
+                </li>
+              </ul>
+            </div>
+
+            <motion.div className="px-1 flex justify-center md:pt-[240px]  text-black hover:text-red  py-2 ">
+              <button className="flex justify-between flex-row hover:bg-white hover:text-red  py-2 px-2 rounded-md shadow-md bg-yellow text-black ">
+                <h1 className="px-1 font-bold">
+                  <a
+                    href="https://paystack.com/pay/h23qg5hxvc"
+                    target={"_blank"}
+                  >
+                    {" "}
+                    Get Ticket
+                  </a>
+                </h1>
+
+                <MdAddCircle className="w-5 h-5 mt-0.5 text-black hover:text-red" />
+              </button>
+            </motion.div>
           </div>
 
-          <div>
-            {/* <h1 className=" px-2 font-semibold">
+          <div className=" flex flex-col  border-2 transition-all duration-500 hover:bg-white hover:text-black  rounded-lg shadow-md">
+            <div className="bg-[#ffd100]">
+              <h1 className="py-3 font-bold flex justify-center px-2 text-black  text-xl">
+                VIP Ticket (₦10000)
+              </h1>
+            </div>
+
+            <div>
+              {/* <h1 className=" px-2 font-semibold">
               Includes all Standard benefits, plus:{" "}
             </h1> */}
-            <ul className="list-none py-2 px-2 font-semibold">
-              <li className="py-1">Access to Networking </li>
-            </ul>
+              <ul className="list-none py-2 px-2 font-semibold">
+                <li className="py-1">
+                  - Reserved seating in keynote sessions and panel discussions.{" "}
+                </li>
+                <li className="py-1">
+                  - Exclusive access to VIP lounges with refreshments.{" "}
+                </li>
+                <li className="py-1">
+                  - Priority networking opportunities with keynote speakers and
+                  high-profile attendees.{" "}
+                </li>
+                <li className="py-1">
+                  - Premium gift bag with conference memorabilia and useful
+                  items.{" "}
+                </li>
+                <li className="py-1">
+                  - Personalized assistance from event staff for any inquiries
+                  or requests.{" "}
+                </li>
+              </ul>
+            </div>
+
+            <motion.div className="px-1 flex justify-center md:pt-[100px] text-black hover:text-red  py-2 ">
+              <button className="flex justify-between flex-row hover:bg-white hover:text-red  py-2 px-2 rounded-md shadow-md bg-yellow text-black ">
+                <h1 className="px-1 font-bold">
+                  <a
+                    href="https://paystack.com/pay/uuqnezta6p"
+                    target={"_blank"}
+                  >
+                    {" "}
+                    Get Ticket
+                  </a>
+                </h1>
+
+                <MdAddCircle className="w-5 h-5 mt-0.5 text-black hover:text-red" />
+              </button>
+            </motion.div>
           </div>
 
-          <motion.div className="px-1 flex justify-center  text-black hover:text-red  py-2 ">
-            <button className="flex justify-between flex-row hover:bg-white hover:text-red  py-2 px-2 rounded-md shadow-md bg-yellow text-black ">
-              <h1 className="px-1 font-bold">
-                <a href="https://paystack.com/pay/h23qg5hxvc" target={"_blank"}>
-                  {" "}
-                  Get Ticket
-                </a>
+          <div className=" flex flex-col  border-2 transition-all duration-500 hover:bg-white hover:text-black  rounded-lg shadow-md">
+            <div className="bg-[#ffd100]">
+              <h1 className="py-3 font-bold flex px-2 justify-center text-black  text-xl">
+                Company Table (₦100k)
               </h1>
+            </div>
 
-              <MdAddCircle className="w-5 h-5 mt-0.5 text-black hover:text-red" />
-            </button>
-          </motion.div>
-        </div>
-
-        <div className=" flex flex-col justify-between border-2 transition-all duration-500 hover:bg-white hover:text-black  rounded-lg shadow-md">
-          <div className="bg-[#ffd100]">
-            <h1 className="py-3 font-bold flex justify-center px-2 text-black  text-xl">
-              VIP Ticket (₦10000)
-            </h1>
-          </div>
-
-          <div>
-            {/* <h1 className=" px-2 font-semibold">
+            <div>
+              {/* <h1 className=" px-2 font-semibold">
               Includes all Standard benefits, plus:{" "}
             </h1> */}
-            <ul className="list-none py-2 px-2 font-semibold">
-              <li className="py-1">Benefit will be listed </li>
-            </ul>
-          </div>
-
-          <motion.div className="px-1 flex justify-center  text-black hover:text-red  py-2 ">
-            <button className="flex justify-between flex-row hover:bg-white hover:text-red  py-2 px-2 rounded-md shadow-md bg-yellow text-black ">
-              <h1 className="px-1 font-bold">
-                <a href="https://paystack.com/pay/uuqnezta6p" target={"_blank"}>
+              <ul className="list-none py-2 px-2 font-semibold">
+                <li className="py-1">
                   {" "}
-                  Get Ticket
-                </a>
-              </h1>
-
-              <MdAddCircle className="w-5 h-5 mt-0.5 text-black hover:text-red" />
-            </button>
-          </motion.div>
-        </div>
-
-        <div className=" flex flex-col justify-between border-2 transition-all duration-500 hover:bg-white hover:text-black  rounded-lg shadow-md">
-          <div className="bg-[#ffd100]">
-            <h1 className="py-3 font-bold flex px-2 justify-center text-black  text-xl">
-              Company Table (₦100k)
-            </h1>
-          </div>
-
-          <div>
-            {/* <h1 className=" px-2 font-semibold">
-              Includes all Standard benefits, plus:{" "}
-            </h1> */}
-            <ul className="list-none py-2 px-2 font-semibold">
-              <li className="py-1">Benefit will be listed </li>
-            </ul>
-          </div>
-
-          <motion.div className="px-1 flex justify-center  text-black hover:text-red  py-2 ">
-            <button className="flex justify-between flex-row hover:bg-white hover:text-red  py-2 px-2 rounded-md shadow-md bg-yellow text-black ">
-              <h1 className="px-1 font-bold">
-                <a href="https://paystack.com/pay/uuqnezta6p" target={"_blank"}>
+                  - Reserved company-branded table for up to 6. attendees.{" "}
+                </li>
+                <li className="py-1">
                   {" "}
-                  Get Ticket
-                </a>
-              </h1>
+                  - Logo and company name featured prominently in event
+                  materials and signage.{" "}
+                </li>
+                <li className="py-1">
+                  {" "}
+                  - Dedicated concierge service for the table throughout the
+                  event.{" "}
+                </li>
+                <li className="py-1">
+                  {" "}
+                  - Opportunity to showcase company products or services at the
+                  table.{" "}
+                </li>
+                <li className="py-1">
+                  {" "}
+                  - Recognition during opening and closing ceremonies.{" "}
+                </li>
+                <li className="py-1">
+                  {" "}
+                  - Digital access to post-event materials and resources.
+                </li>
+                <li className="py-1">
+                  {" "}
+                  - Opportunity to interact with exhibitors and sponsors.{" "}
+                </li>
+              </ul>
+            </div>
 
-              <MdAddCircle className="w-5 h-5 mt-0.5 text-black hover:text-red" />
-            </button>
-          </motion.div>
+            <motion.div className="px-1 flex justify-center  text-black hover:text-red  py-2 ">
+              <button className="flex justify-between flex-row hover:bg-white hover:text-red  py-2 px-2 rounded-md shadow-md bg-yellow text-black ">
+                <h1 className="px-1 font-bold">
+                  <a
+                    href="https://paystack.com/pay/uuqnezta6p"
+                    target={"_blank"}
+                  >
+                    {" "}
+                    Get Ticket
+                  </a>
+                </h1>
+
+                <MdAddCircle className="w-5 h-5 mt-0.5 text-black hover:text-red" />
+              </button>
+            </motion.div>
+          </div>
         </div>
       </div>
-      </div>
 
-      <div
+      {/* <div
         id="schedule"
-        className="text-yellow bg-black  p-20 border-b-2 z-20 text-center"
+        className="text-yellow bg-black flex flex-col p-20 border-b-2 z-20 text-center"
       >
-        <h1 className="text-4xl font-bold">Schedule</h1>
-        <p className="text-white ">Coming soon...</p>
-      </div>
+        <motion.div
+        className="loading-animation w-1/2 h-1/2"
+        initial={{ width: 0 }} 
+        animate={{ width: '100%' }} 
+        transition={{ duration: 1, type: 'spring', stiffness: 50 }} 
+      >
+        <p className="text-white">Loadingg...</p>
+      </motion.div>
+       
+      </div> */}
 
       <div
         id="speakers"
@@ -511,37 +590,39 @@ const MainApp = () => {
           <p className="text-white ">Coming soon...</p>
         </div>
 
-        <div
+        {/* <div
           id="partners"
           className="p-20 flex justify-center flex-col text-center"
         >
           <h1 className="text-4xl font-bold">Community Partnership</h1>
           <p className="text-white ">Coming soon...</p>
-        </div>
+        </div> */}
 
-        <div
+        {/* <div
           id="volunteer"
           className="p-20 flex justify-center flex-col text-center"
         >
           <h1 className="text-4xl font-bold">Volunteer</h1>
           <p className="text-white ">Coming soon...</p>
-        </div>
+        </div> */}
       </div>
 
-      <div
+      {/* <div
         id="gallery"
         className="text-yellow text-2xl bg-black p-20 border-b-2 text-center"
       >
         <h1 className="text-4xl font-bold">Gallery</h1>
         <p className="text-white ">Coming soon...</p>
-      </div>
+      </div> */}
 
       <div
         id="contact"
-        className="text-yellow text-2xl bg-black p-20 border-b-2 text-center"
+        className="text-yellow text-2xl bg-black xx:py-5 px-3 md:p-20 border-b-2 text-center"
       >
         <h1 className="text-4xl font-bold">Contact</h1>
-        <p className="text-white ">Coming soon...</p>
+        <p className="text-white py-3 ">
+          For sponsorships and enquiries contact <b>07062380867 </b>
+        </p>
       </div>
 
       <footer className="py-3 flex flex-col text-2xl bg-black text-yellow text-center">
