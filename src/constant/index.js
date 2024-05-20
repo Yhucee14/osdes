@@ -17,7 +17,7 @@ export const speakers = [
     {
       name: "Adebayo Ibrahim",
       role: "Youtuber/Content Creator, Password TV",
-      img: "/ibra.jpg",
+      img: "/ade.jpg",
     //   linkedin: "https://www.linkedin.com/in/oluwaseun-hamzat/",
     },
     {
@@ -29,7 +29,13 @@ export const speakers = [
     {
         name: "Taofeek Ibrahim Adeshina",
         role: "FotoNuggetSports Photo Journalist",
-        img: "/ade.jpg",
+        img: "/ibra.jpg",
+      //   linkedin: "https://www.linkedin.com/in/oluwaseun-hamzat/",
+      },
+      {
+        name: "Lumee ",
+        role: "Content Creator",
+        img: "/lumee.jpg",
       //   linkedin: "https://www.linkedin.com/in/oluwaseun-hamzat/",
       },
 

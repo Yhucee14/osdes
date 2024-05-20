@@ -586,53 +586,34 @@ const MainApp = () => {
       >
         <h1 className="text-4xl py-3 font-bold">Speakers</h1>
         <div className="grid sm:grid-cols-2 md:grid-cols-4 py-4 xx:grid-cols-1 sm:gap-8 xx:gap-4 z-10">
-          {speakers.map((speaker, index) => (
-            <div
-              className="relative overflow-hidden rounded-lg "
-              key={speaker.name}
-              onMouseEnter={() => setHoveredSpeaker(index)}
-              onMouseLeave={() => setHoveredSpeaker(null)}
-            >
-              <img
-                src={speaker.img}
-                alt={speaker.name}
-                width={350}
-                height={350}
-                className={` h-[350px] w-[350px] object-cover cursor-pointer transform scale-100 transition-transform duration-300 ${
-                  hoveredSpeaker === index ? "scale-105" : ""
-                }`}
-              />
+  {speakers.map((speaker, index) => (
+    <div
+      className="relative overflow-hidden rounded-lg "
+      key={speaker.name}
+      onMouseEnter={() => setHoveredSpeaker(index)}
+      onMouseLeave={() => setHoveredSpeaker(null)}
+    >
+      <div className="overflow-hidden">
+        <img
+          src={speaker.img}
+          alt={speaker.name}
+          width={350}
+          height={350}
+          className={`h-[350px] w-[350px] object-cover cursor-pointer transform transition-transform duration-300 ${hoveredSpeaker === index ? 'scale-105' : ''}`}
+        />
+      </div>
 
-              <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: hoveredSpeaker === index ? 0.8 : 0 }}
-                transition={{ duration: 0.3 }}
-                className={`absolute inset-0 flex xx:justify-end md:justify-between xx:flex-col md:flex-row xx:items-center md:items-end py-3 cursor-pointer  bg-black  font-bold opacity-10 text-xl`}
-              >
-                <div className="px-1">
-                  <h1 className="text-lg font-bold text-red ">
-                    {speaker.name}
-                  </h1>
-                  <h1 className="text-sm  text-yellow ">
-                    {speaker.desc}
-                  </h1>
-                  <div className="text-sm font-semibold text-white">
-                    {speaker.role}
-                  </div>
-                </div>
+      <div className="mt-2 text-center">
+        <h1 className="text-lg font-bold text-[#ffd100]">{speaker.name}</h1>
+        <div className="text-sm font-semibold text-white">{speaker.role}</div>
+        <a href={speaker.linkedin} className="flex justify-center mt-2">
+          <BiLogoLinkedinSquare className="text-[#0e76a8] hover:text-[#006290]" size={25} />
+        </a>
+      </div>
+    </div>
+  ))}
+</div>
 
-                <div className="flex px-2 ">
-                  <a href={speaker.linkedin} className="flex justify-center">
-                    <BiLogoLinkedinSquare
-                      className="text-[#0e76a8] hover:text-[#006290]"
-                      size={25}
-                    />
-                  </a>
-                </div>
-              </motion.div>
-            </div>
-          ))}
-        </div>
       </div>
 
       <div
