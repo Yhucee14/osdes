@@ -14,10 +14,13 @@ import { BsTwitter } from "react-icons/bs";
 import { FaLinkedinIn } from "react-icons/fa";
 import { motion } from "framer-motion";
 import { MdAddCircle } from "react-icons/md";
+import { speakers } from "./constant";
+import { BiLogoLinkedinSquare } from "react-icons/bi";
 
 const MainApp = () => {
   const [isMobile, setIsMobile] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const [hoveredSpeaker, setHoveredSpeaker] = useState(null);
 
   useEffect(() => {
     const handleResize = () => {
@@ -261,8 +264,8 @@ const MainApp = () => {
                 />
 
                 <div className="absolute inset-2 left-2 flex justify-center bg-gradient-to-b from-transparent to-[#2f1f6d4e] bg-opacity-20"></div>
-                <div className="absolute inset-0  flex flex-col justify-center bg-gradient-to-b from-transparent to-[#050212f0] bg-opacity-40 transition-all duration-300 hover:bg-opacity-40 sm:py-32 mt-[-3rem] sm:px-6 px-2 ">
-                  <h1 className="font-bold text-white xx:text-2xl sm:text-4xl md:text-5xl text-transparent z-10 py-2">
+                <div className="absolute inset-0  flex flex-col justify-center bg-gradient-to-b from-transparent to-[#050212f0] bg-opacity-40 transition-all duration-300 hover:bg-opacity-40 sm:py-32 mt-[-1rem] sm:px-6 px-2 ">
+                  <h1 className="font-bold text-white xx:text-2xl sm:text-4xl md:text-5xl text-transparent z-10 py-4">
                     Oyo State
                   </h1>
 
@@ -270,11 +273,18 @@ const MainApp = () => {
                     Digital Economy Summit Ibadan
                   </h1>
 
-                  <h1 className="font-bold xx:text-xl sm:text-2xl py-2 text-white">
+                  <div className="font-bold text-xl text-yellow py-2 flex justify-center">
+                    <p>
+                      Largest convergence of content creators, YouTubers, skit
+                      makers,<br /> Tech enthusiasts and film-makers in Oyo state.
+                    </p>
+                  </div>
+
+                  <h1 className="font-bold xx:text-xl sm:text-2xl py-2 text-yellow">
                     15th June, 2024
                   </h1>
 
-                  <div className="flex sm:flex-row xx:flex-col items-center justify-center py-4 sm:py-5 sm:pt-10 ">
+                  <div className="flex sm:flex-row xx:flex-col items-center justify-center py-4 sm:py-5 sm:pt-6 ">
                     <MdOutlineLocationOn className="w-6 h-6 text-yellow font-bold" />
 
                     <h1
@@ -318,7 +328,7 @@ const MainApp = () => {
         <div className=" md:w-[50%]  rounded-md flex ">
           <div className="w-full px-5 h-[300px]">
             <iframe
-              src="https://www.youtube.com/embed/_YEuyAuoMxU"
+              src="https://www.youtube.com/embed/LHpF9XBA0M0"
               title="Video Player"
               allowFullscreen
               className="w-full h-full flex py-3 justify-center"
@@ -572,10 +582,57 @@ const MainApp = () => {
 
       <div
         id="speakers"
-        className="text-yellow z-20 bg-black p-20 border-b-2 text-center"
+        className="text-yellow z-20 bg-black xx:px-4 sm:px-7 md:px-8 border-b-2 text-center"
       >
-        <h1 className="text-4xl font-bold">Speakers</h1>
-        <p className="text-white ">Coming soon...</p>
+        <h1 className="text-4xl py-3 font-bold">Speakers</h1>
+        <div className="grid sm:grid-cols-2 md:grid-cols-4 py-4 xx:grid-cols-1 sm:gap-8 xx:gap-4 z-10">
+          {speakers.map((speaker, index) => (
+            <div
+              className="relative overflow-hidden rounded-lg "
+              key={speaker.name}
+              onMouseEnter={() => setHoveredSpeaker(index)}
+              onMouseLeave={() => setHoveredSpeaker(null)}
+            >
+              <img
+                src={speaker.img}
+                alt={speaker.name}
+                width={350}
+                height={350}
+                className={` h-[350px] w-[350px] object-cover cursor-pointer transform scale-100 transition-transform duration-300 ${
+                  hoveredSpeaker === index ? "scale-105" : ""
+                }`}
+              />
+
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: hoveredSpeaker === index ? 0.8 : 0 }}
+                transition={{ duration: 0.3 }}
+                className={`absolute inset-0 flex xx:justify-end md:justify-between xx:flex-col md:flex-row xx:items-center md:items-end py-3 cursor-pointer  bg-black  font-bold opacity-10 text-xl`}
+              >
+                <div className="px-1">
+                  <h1 className="text-lg font-bold text-red ">
+                    {speaker.name}
+                  </h1>
+                  <h1 className="text-sm  text-yellow ">
+                    {speaker.desc}
+                  </h1>
+                  <div className="text-sm font-semibold text-white">
+                    {speaker.role}
+                  </div>
+                </div>
+
+                <div className="flex px-2 ">
+                  <a href={speaker.linkedin} className="flex justify-center">
+                    <BiLogoLinkedinSquare
+                      className="text-[#0e76a8] hover:text-[#006290]"
+                      size={25}
+                    />
+                  </a>
+                </div>
+              </motion.div>
+            </div>
+          ))}
+        </div>
       </div>
 
       <div
