@@ -15,7 +15,6 @@ import { FaLinkedinIn } from "react-icons/fa";
 import { motion } from "framer-motion";
 import { MdAddCircle } from "react-icons/md";
 import { speakers } from "./constant";
-import { BiLogoLinkedinSquare } from "react-icons/bi";
 
 const MainApp = () => {
   const [isMobile, setIsMobile] = useState(false);
@@ -606,9 +605,7 @@ const MainApp = () => {
       <div className="mt-2 text-center">
         <h1 className="text-lg font-bold text-[#ffd100]">{speaker.name}</h1>
         <div className="text-sm font-semibold text-white">{speaker.role}</div>
-        <a href={speaker.linkedin} className="flex justify-center mt-2">
-          <BiLogoLinkedinSquare className="text-[#0e76a8] hover:text-[#006290]" size={25} />
-        </a>
+     
       </div>
     </div>
   ))}
