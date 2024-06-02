@@ -38,5 +38,41 @@ export const speakers = [
         img: "/lumee.jpg",
       //   linkedin: "https://www.linkedin.com/in/oluwaseun-hamzat/",
       },
+      {
+        name: "Josiah Adegboye ",
+        role: "Co-Founder, Smarg",
+        img: "/jo.jpeg",
+      //   linkedin: "https://www.linkedin.com/in/oluwaseun-hamzat/",
+      },
+      {
+        name: "JesuDamilare Adesegun David",
+        role: "Co-Founder, Ennovate Lab",
+        img: "/jesu.jpeg",
+      //   linkedin: "https://www.linkedin.com/in/oluwaseun-hamzat/",
+      },
+      {
+        name: "Taiwo Egunjobi",
+        role: "AMVCA Nominated Movie Director",
+        img: "/Taiwo.jpg",
+      //   linkedin: "https://www.linkedin.com/in/oluwaseun-hamzat/",
+      },
+      {
+        name: "Tomi Walker",
+        role: "ImaliPay",
+        img: "/Tomi.jpg",
+      //   linkedin: "https://www.linkedin.com/in/oluwaseun-hamzat/",
+      },
+      {
+        name: "Taiwo Akinropo",
+        role: "Co-Founder, HeyFood",
+        img: "/HeyFood.jpg",
+      //   linkedin: "https://www.linkedin.com/in/oluwaseun-hamzat/",
+      },
+      {
+        name: "Mrs Fayo Williams ",
+        role: "Founder, Simply Exponential Consult",
+        img: "",
+      //   linkedin: "https://www.linkedin.com/in/oluwaseun-hamzat/",
+      },
 
   ];
