@@ -83,8 +83,8 @@ export const speakers = [
       },
       {
         name: "Mrs Fayo Williams ",
-        role: "Founder, Simply Exponential Consult",
-        img: "fayo.jpg",
+        role: "Founder, Exponential Hub",
+        img: "fayooo.jpg",
         linkedin: "https://www.linkedin.com/in/fayowilliams",
       },
       {
