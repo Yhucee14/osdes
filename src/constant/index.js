@@ -15,6 +15,12 @@ export const speakers = [
       linkedin: "https://www.linkedin.com/in/fayowilliams",
     },
     {
+      name: "Josiah Adegboye ",
+      role: "Co-Founder, Smarg",
+      img: "/jo.jpeg",
+      linkedin: "https://www.linkedin.com/in/j-a-adegboye",
+    },
+    {
       name: "Alamu Akinkunmi",
       role: "Creative Director, Founder of KommunityFlex",
       img: "/alamu.jpg",
@@ -39,10 +45,10 @@ export const speakers = [
         linkedin: "https://www.linkedin.com/in/fayowilliams",
       },
       {
-        name: "Josiah Adegboye ",
-        role: "Co-Founder, Smarg",
-        img: "/jo.jpeg",
-        linkedin: "https://www.linkedin.com/in/j-a-adegboye",
+        name: "Hon. Seun Fakorede ",
+        role: "Executive Adviser on Youth and Sport Oyo State Government",
+        img: "/seun.jpeg",
+        linkedin: "",
       },
       {
         name: "JesuDamilare Adesegun David",
