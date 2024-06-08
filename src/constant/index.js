@@ -47,7 +47,7 @@ export const speakers = [
       {
         name: "Hon. Seun Fakorede ",
         role: "Executive Adviser on Youth and Sport Oyo State Government",
-        img: "/seun.jpeg",
+        img: "/seun.jpg",
         linkedin: "",
       },
       {
@@ -65,7 +65,7 @@ export const speakers = [
     },
       {
         name: "Taiwo Egunjobi",
-        role: "AMVCA Nominated Movie Director",
+        role: "Director/Writer",
         img: "/Taiwo.jpg",
         linkedin: "https://www.linkedin.com/in/taiwoegunjobi",
       },

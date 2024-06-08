@@ -599,7 +599,7 @@ const MainApp = () => {
           alt={speaker.name}
           width={350}
           height={350}
-          className={`h-[350px] w-[350px] object-cover cursor-pointer transform transition-transform duration-300 ${hoveredSpeaker === index ? 'scale-105' : ''}`}
+          className={`xx:h-[350px] xx:w-[350px] ss:w-full ss:h-[400px] flex  object-cover cursor-pointer transform transition-transform duration-300 ${hoveredSpeaker === index ? 'scale-105' : ''}`}
         />
       </div>
 
