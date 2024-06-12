@@ -1,6 +1,7 @@
 import "./index.css";
 import { useState, useEffect } from "react";
 import logo from "./images/logo.png";
+import smarg from "./images/smarg.png";
 import { CgMenuGridR } from "react-icons/cg";
 import { AiFillCloseCircle } from "react-icons/ai";
 import { Carousel as Caro } from "react-responsive-carousel";
@@ -163,9 +164,7 @@ const MainApp = () => {
               >
                 <div className="flex items-center flex-row ">
                   <button className="flex justify-between flex-row transition duration-500 font-semibold py-2 px-2 rounded-md shadow-sm bg-yellow text-black border-2 border-red hover:bg-white hover:text-red">
-                    
-                      Get Ticket
-                   
+                    Get Ticket
                   </button>
                 </div>
               </Link>
@@ -276,7 +275,8 @@ const MainApp = () => {
                   <div className="font-bold text-xl text-yellow py-2 flex justify-center">
                     <p>
                       Largest convergence of content creators, YouTubers, skit
-                      makers,<br /> Tech enthusiasts and film-makers in Oyo state.
+                      makers,
+                      <br /> Tech enthusiasts and film-makers in Oyo state.
                     </p>
                   </div>
 
@@ -586,34 +586,42 @@ const MainApp = () => {
       >
         <h1 className="text-4xl py-3 font-bold">Speakers</h1>
         <div className="grid sm:grid-cols-2 md:grid-cols-4 py-4 xx:grid-cols-1 sm:gap-8 xx:gap-4 z-10">
-  {speakers.map((speaker, index) => (
-    <div
-      className="relative overflow-hidden rounded-lg "
-      key={speaker.name}
-      onMouseEnter={() => setHoveredSpeaker(index)}
-      onMouseLeave={() => setHoveredSpeaker(null)}
-    >
-      <div className="overflow-hidden">
-        <img
-          src={speaker.img}
-          alt={speaker.name}
-          width={350}
-          height={350}
-          className={`xx:h-[350px] xx:w-[350px] ss:w-full ss:h-[400px] flex  object-cover cursor-pointer transform transition-transform duration-300 ${hoveredSpeaker === index ? 'scale-105' : ''}`}
-        />
-      </div>
+          {speakers.map((speaker, index) => (
+            <div
+              className="relative overflow-hidden rounded-lg "
+              key={speaker.name}
+              onMouseEnter={() => setHoveredSpeaker(index)}
+              onMouseLeave={() => setHoveredSpeaker(null)}
+            >
+              <div className="overflow-hidden">
+                <img
+                  src={speaker.img}
+                  alt={speaker.name}
+                  width={350}
+                  height={350}
+                  className={`xx:h-[350px] xx:w-[350px] ss:w-full ss:h-[400px] flex  object-cover cursor-pointer transform transition-transform duration-300 ${
+                    hoveredSpeaker === index ? "scale-105" : ""
+                  }`}
+                />
+              </div>
 
-      <div className="mt-2 text-center">
-        <h1 className="text-lg font-bold text-[#ffd100]">{speaker.name}</h1>
-        <div className="text-sm font-semibold text-white">{speaker.role}</div>
-        <a href={speaker.linkedin} className="flex justify-center mt-2">
-          <BiLogoLinkedinSquare className="text-[#0e76a8] hover:text-[#006290]" size={25} />
-        </a>
-      </div>
-    </div>
-  ))}
-</div>
-
+              <div className="mt-2 text-center">
+                <h1 className="text-lg font-bold text-[#ffd100]">
+                  {speaker.name}
+                </h1>
+                <div className="text-sm font-semibold text-white">
+                  {speaker.role}
+                </div>
+                <a href={speaker.linkedin} className="flex justify-center mt-2">
+                  <BiLogoLinkedinSquare
+                    className="text-[#0e76a8] hover:text-[#006290]"
+                    size={25}
+                  />
+                </a>
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
 
       <div
@@ -663,7 +671,7 @@ const MainApp = () => {
         </p>
       </div>
 
-      <footer className="py-3 flex flex-col text-2xl bg-black text-yellow text-center">
+      <footer className="py-3 flex flex-col text-2xl bg-black items-center text-yellow text-center">
         <div className="flex flex-col justify-center">
           <h1 className="font-bold xx:text-2xl sm:text-3xl py-4  flex justify-center">
             OSDES 24
@@ -708,18 +716,10 @@ const MainApp = () => {
           </motion.div>
         </div>
 
-        {/* <div className="flex flex-row sm:justify-center py-2">
-          <h1 className="">Organized by </h1>
-
-          <a href="https://atcafrica.com" target={"_blank"}>
-            <h1 className="text-[#ffd100] px-0.5">OSDES 2024 </h1> |
-          </a>
-
-          <h1> Powered by </h1>
-          <a href="http://techappen.com" target={"_blank"}>
-            <h1 className="text-[#ffd100] px-0.5">TecHappe </h1>
-          </a>
-        </div> */}
+        <div className="flex justify-center w-[50%] font-semibold text-black rounded-md items-center bg-white">
+          powered by
+          <img src={smarg} alt="Logo" className="ml-3 mt-1 w-[100px] h-5" />
+        </div>
 
         <h1 className=" py-3 flex px-3 justify-center xx:text-center">
           © 2024 OSDES. All Rights Reserved.{" "}
