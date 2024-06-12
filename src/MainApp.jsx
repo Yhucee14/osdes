@@ -716,7 +716,7 @@ const MainApp = () => {
           </motion.div>
         </div>
 
-        <div className="flex justify-center w-[50%] font-semibold text-black rounded-md items-center bg-white">
+        <div className="flex justify-center w-[300px] font-semibold text-black rounded-md items-center bg-white">
           powered by
           <img src={smarg} alt="Logo" className="ml-3 mt-1 w-[100px] h-5" />
         </div>
