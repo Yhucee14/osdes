@@ -51,7 +51,7 @@ export const speakers = [
         linkedin: "",
       },
       {
-        name: "JesuDamilare Adesegun David",
+        name: "JesuDamilare Adesegun-David",
         role: "Co-Founder, Ennovate Lab",
         img: "/jesu.jpeg",
         linkedin: "https://www.linkedin.com/in/jesudamilareadesegundavid",
@@ -71,7 +71,7 @@ export const speakers = [
       },
       {
         name: "Tomi Walker",
-        role: "ImaliPay",
+        role: "Co-founder, Saige Institute",
         img: "/Tomi.jpg",
         linkedin: "https://www.linkedin.com/in/tomiwalker",
       },
@@ -88,7 +88,7 @@ export const speakers = [
         linkedin: "",
       },
       {
-        name: "Mrs Fayo Williams ",
+        name: "Fayo Williams ",
         role: "Founder, Exponential Hub",
         img: "fayooo.jpg",
         linkedin: "https://www.linkedin.com/in/fayowilliams",
